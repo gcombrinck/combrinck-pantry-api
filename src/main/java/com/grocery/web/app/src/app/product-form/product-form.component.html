@@ -1,0 +1,38 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="product.name"
+               class="form-control"
+               id="name"
+               name="name"
+               placeholder="Enter product name"
+               required #name="ngModel">
+      </div>
+      <div [hidden]="!name.pristine" class="alert alert-danger">Product name is required</div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" [(ngModel)]="product.description"
+               class="form-control"
+               id="description"
+               name="description"
+               placeholder="Enter your product description"
+               required #email="ngModel">
+        <div [hidden]="!email.pristine" class="alert alert-danger">Product description is required</div>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="text" [(ngModel)]="product.quantity"
+               class="form-control"
+               id="quantity"
+               name="quantity"
+               placeholder="Enter your quantity"
+               required #email="ngModel">
+        <div [hidden]="!email.pristine" class="alert alert-danger">Product quantity is required</div>
+      </div>
+      <button type="submit" [disabled]="!productForm.form.valid"
+              class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
