@@ -1,0 +1,14 @@
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Pringles",
+  "description": "Yummy Chips",
+  "quantity": 5
+}
+
+###
+GET http://localhost:8080/products
+Accept: application/json
+
+###
