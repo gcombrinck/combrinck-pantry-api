@@ -14,11 +14,9 @@
     <packaging>jar</packaging>
     <name>grocery-api</name>
     <description>Family Grocery list API</description>
-
     <properties>
         <java.version>14</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
